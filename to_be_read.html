@@ -4,86 +4,114 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="images/book_icon.png"/>
+    <link rel="icon" type="image/png" href="images/book_icon.png">
     <link rel="stylesheet" href="css/html5reset.css">
     <link href='https://fonts.googleapis.com/css?family=Assistant' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Courier Prime' rel='stylesheet'>
     <link rel="stylesheet" href="css/style.css">
     <title>Tyra Briscoe Final Project</title>
 </head>
    
 <body>
     <a class = "skip" href="#skip">Skip to Main Content</a>
-    <div class="header">
-        <h1>Tyra's Library</h1>
-    </div>
-    
+    <header class="header">
+        <h1 id = "typewriter">Tyra's Library</h1>
+    </header>
+
+    <nav>
     <div class="topnav">
         <a href="index.html">Home </a>
         <a href = "fave_books.html" > My Favorite Books </a>
-        <a href = "to_be_read.html" class="active_page"> Books to Read</a>
+        <a href = "to_be_read.html" class="active_page"> My Reading List</a>
     </div>
+    </nav>
 
     <main id ="skip">
-        <div class ="gallery">
-            <div id="blood">
-                <img src="images/blood_in_my_eye_cover.jpg" alt="Blood in My Eye by George Jackson "/>
-                <p>Blood In My Eye by George Jackson</p>
-            </div>
 
-            <div id="dear">
-                <img src="images/dear_senthuran_cover.jpeg" alt="Dear Senthuran by Akwaeke Emezi"/>
-                <p>Dear Senthuran by Akwaeke Emezi</p>
-            </div>
-
-            <div id="wretched">
-                <img src="images/wretched_cover.jpg" alt="The Wretched of the Earth by Frantz Fanon"/>
-                <p>The Wretched of the Earth by Frantz Fanon</p>
-            </div>
-            
-            <div id="blackbody">
-                <img src="images/killing_black_body_cover.jpeg" alt="Killing of the Black Body by Dorothy Roberts"/>
-                <p>Killing of the Black Body by Dorothy Roberts</p>
-            </div>
-
-            <div id="idiot">
-                <img src ="images/the_idiot_cover.jpg" alt="The Idiot by Elif Batuman"/>
-                <p>The Idiot by Elif Batuman</p>
-            </div>
-            
-            <div id="vivekoji">
-                <img src="images/death_of_vivek_oji_cover.jpg" alt="The Death of Vivek Oji by Akwaeke Emezi"/>
-                <p>The Death of Vivek Oji by Akwaeke Emezi</p>
-            </div>
-            
-            <div id="love">
-                <img src="images/all_about_love_cover.jpg" alt="All About Love by bell hooks"/>
-                <p>All About Love by bell hooks</p>
-            </div>
-
-            <div id="transkingdom">
-                <img src="images/transcendent_kingdom.jpg" alt="Transcendent Kingdom by Yaa Gyasi"/>
-                <p>Transcendent Kingdom by Yaa Gyasi</p>
-            </div>
-
-            <div id="almond">
-                <img src="images/almond_cover.jpg" alt="Almond by Won-Pyung Sohn"/>
-                <p>Almond by Won-Pyung Sohn</p>
-            </div>
-
-            <div id="heaven">
-                <img src="images/heaven_cover.jpeg" alt="Heaven by Mieko Kawakami"/>
-                <p>Heaven by Mieko Kawakami</p>
-            </div>
-
-            <div id="belly">
-                <img src="images/belly_cover.jpeg" alt="Belly of the Beast by Da'Shaun L. Harrison"/>
-                <p>Belly of the Beast: The Politics of Anti-Fatness as Anti-Blackness by Da'Shaun L. Harrison</p>
-            </div>
-
-            <div id="book12">
-                <img src="images/tomorrowx3.jpeg" alt = "Tomorrow, and Tomorrow, and Tomorrow by Gabrielle Zevin"/>
-                <p>Tomorrow, and Tomorrow, and Tomorrow by Gabrielle Zevin</p>
-            </div>
+        <div class="controls">
+            <button type="button" class="control" data-filter="all">All</button>
+            <button type="button" class="control" data-filter=".nonfict">Non Fiction</button>
+            <button type="button" class="control" data-filter=".fiction">Fiction</button>
+            <button type="button" class="control" data-filter=".owned">Books I Own</button>
+            <button type="button" class="control" data-filter=".notowned">Books I Don't Own</button>
+            <button type="button" class="control" data-filter="none">None</button>
         </div>
+        <div class ="gallery">
+
+            <figure class ="mix nonfict notowned" id="blood">
+                <img src="images/blood_in_my_eye_cover.jpg" alt="Blood in My Eye by George Jackson">
+                <figcaption>Blood In My Eye by George Jackson</figcaption>
+            </figure>
+
+            <figure class ="mix nonfict owned" id="dear">
+                <img src="images/dear_senthuran_cover.jpeg" alt="Dear Senthuran by Akwaeke Emezi">
+                <figcaption>Dear Senthuran by Akwaeke Emezi</figcaption>
+            </figure>
+
+            <figure class ="mix nonfict owned" id="wretched">
+                <img src="images/wretched_cover.jpg" alt="The Wretched of the Earth by Frantz Fanon">
+                <figcaption>The Wretched of the Earth by Frantz Fanon</figcaption>
+            </figure>
+            
+            <figure class = "mix nonfict notowned" id="blackbody">
+                <img src="images/killing_black_body_cover.jpeg" alt="Killing of the Black Body by Dorothy Roberts">
+                <figcaption>Killing of the Black Body by Dorothy Roberts</figcaption>
+            </figure>
+
+            <figure class ="mix fiction notowned" id="idiot">
+                <img src ="images/the_idiot_cover.jpg" alt="The Idiot by Elif Batuman">
+                <figcaption>The Idiot by Elif Batuman</figcaption>
+            </figure>
+            
+            <figure class ="mix fiction owned" id="vivekoji">
+                <img src="images/death_of_vivek_oji_cover.jpg" alt="The Death of Vivek Oji by Akwaeke Emezi">
+                <figcaption>The Death of Vivek Oji by Akwaeke Emezi</figcaption>
+            </figure>
+            
+            <figure class ="mix nonfict notowned" id="love">
+                <img src="images/all_about_love_cover.jpg" alt="All About Love by bell hooks">
+                <figcaption>All About Love by bell hooks</figcaption>
+            </figure>
+
+            <figure class ="mix fiction notowned" id="transkingdom">
+                <img src="images/transcendent_kingdom.jpg" alt="Transcendent Kingdom by Yaa Gyasi">
+                <figcaption>Transcendent Kingdom by Yaa Gyasi</figcaption>
+            </figure>
+
+            <figure class ="mix fiction owned" id="almond">
+                <img src="images/almond_cover.jpg" alt="Almond by Won-Pyung Sohn">
+                <figcaption>Almond by Won-Pyung Sohn</figcaption>
+            </figure>
+
+            <figure class = "mix fiction owned" id="heaven">
+                <img src="images/heaven_cover.jpeg" alt="Heaven by Mieko Kawakami">
+                <figcaption>Heaven by Mieko Kawakami</figcaption>
+            </figure>
+
+            <figure class ="mix nonfict owned" id="belly">
+                <img src="images/belly_cover.jpeg" alt="Belly of the Beast by Da'Shaun L. Harrison">
+                <figcaption>Belly of the Beast: The Politics of Anti-Fatness as Anti-Blackness by Da'Shaun L. Harrison</figcaption>
+            </figure>
+
+            <figure class="mix fiction notowned" id="book12">
+                <img src="images/tomorrowx3.jpeg" alt = "Tomorrow, and Tomorrow, and Tomorrow by Gabrielle Zevin">
+                <figcaption>Tomorrow, and Tomorrow, and Tomorrow by Gabrielle Zevin</figcaption>
+            </figure>
+        </div>
+        <footer class="footer">
+            <p>
+                <a class="top" href="#skip">Return to Top</a>
+                <br>Tyra Briscoe (2022)
+            </p>
+        </footer>
+
+    <script src="js/mixitup.min.js"></script>
+
+    <script>
+        var containerEl = document.querySelector('.gallery');
+
+        var mixer = mixitup(containerEl);
+    </script>
+
     </main>
 </body>

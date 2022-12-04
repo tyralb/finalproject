@@ -2,46 +2,20 @@
 /* header */
 
 header{
-    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .header {
     padding: 30px;
     text-align: center;
     background-image: url(../images/lightmodeheader.jpg);
-    background-color: #cccccc;
-    background-repeat: repeat;
   }
 
   .header h1 {
-    font-family: 'Courier Prime';
     font-size: 50px;
-    text-shadow: 0 0 3px #D6D0C8;
   }  
-
-#typewriter{
-    overflow: hidden;
-    border-right: .15em solid #BCB3AE; 
-    white-space: nowrap;
-    margin: 0 auto;
-    animation: 
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end 10s;
-}
-
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #D6D0C8; }
-}
-
-
 /* nav bar */
 .topnav {
     display:flex;
@@ -63,36 +37,20 @@ header{
     text-decoration: underline;
   }
 
-/* highlights current page */
+/* highlights current page -  i want to add a book emoji before the name of the page but idk how */
 .topnav a.active_page:link, a.active_page:visited{
     /* content:'\1F4D6';  */
     text-decoration:underline;
 }
 
 body{
-    width: 100%;
-    background-color: #D6D0C8;
+    background-color: #dbc1ac;
 	font-family: 'Assistant';
     font-size: 18px;
 }
 
 body h2{
-    font-size: 25px;
-    font-family: 'Courier Prime';
-    text-align: center;
-}
-
-h2 a{
-    text-decoration: none;
-    color: inherit;
-}
-body h3{
-    padding-bottom: 5px;
     font-size: 21px;
-}
-
-p, li{
-    line-height: 1.4;
 }
 /* book bullet points */
 ul{
@@ -102,28 +60,13 @@ ul{
 
 
 /* Footer */
-.footer {
+/* .footer {
     padding: 20px;
     text-align: center;
     background-image: url(../images/lightmodeheader.jpg);
     margin-top: 20px;
-    font-size: 30px;
-    text-shadow: 0 0 3px #D6D0C8;
-  }
+  } */
   
-  footer p{
-    display:inline-block;
-    padding: 5px;
-    font-size: 21px;
-    border: 2px solid #333;
-    background-color: #333;
-    color: #D6D0C8;
-    text-shadow: none;
-  }
-
-  footer p a{
-    color: #D6D0C8;
-  }
 /* skip to content */
 a.skip{
 background: white;
@@ -153,33 +96,24 @@ h2{
     padding: 11px;
 }
 
+
 /* home page */
 
 .home_container{
     display: grid;
-    justify-content: center;
     width: 90%;
-    margin: auto;
     grid-template-columns: 1fr;
     padding-top: 11px;
-    grid-column-gap: 20px;
+    justify-content: space-around;
+    align-items: center;
 }
-
 /* cards */
 .card {
-    background-color: #ddd7ce;
+    background-color: #ece0d1;
     padding: 20px;
     margin-top: 20px;
     flex-basis: 100%;
   }
-  .home_container > .current_read > .bookcontainer{
-    padding: 11px;
-    width: 65%;
-    margin: auto;
-    display: block;
-    justify-content: space-around;
-}
-
 
 /* currently reading overlay */
 .bookcontainer {
@@ -213,7 +147,7 @@ opacity: 1;
 .booktext {
 color: white;
 font-family: 'Assistant';
-font-size: 2em;
+font-size: 20px;
 position: absolute;
 top: 45%;
 left: 50%;
@@ -226,7 +160,6 @@ transform: translate(-50%, -50%);
     display: flex;
     flex-direction: row;
     flex-wrap:wrap;
-    justify-content: center;
     justify-items: center;
     align-content: center;
 }
@@ -237,12 +170,6 @@ transform: translate(-50%, -50%);
     height: auto;
     flex-wrap: wrap;
     align-content: center;
-}
-.flex_img> img:hover, .gallery > figure> img:hover{
-    border: solid 3px #A5AB60;
-} 
-.booktitle > p{
-    text-align: center;
 }
      
 /* grid- tbr page */
@@ -256,6 +183,12 @@ transform: translate(-50%, -50%);
     align-items: center;
 }
 
+.gallery > figure{
+    /* width: 280px;
+    height: 100px;
+    background-color: #E5C19A; */
+    border: 10px ridge #A15C3D;
+}
 
 .gallery > figure > img{
     width: 85%;
@@ -267,19 +200,12 @@ transform: translate(-50%, -50%);
     text-align: center;
 }
 
-.controls{
-    display: flex;
-    flex-direction: row;
-    flex-wrap:wrap;
-    justify-content: center;
-}
-
 .controls > button {
     -webkit-border-radius: 4;
     -moz-border-radius: 4;
     border-radius: 4px;
     color: #3a2d28;
-    background: #BCB3AE;
+    background: #a48374;
     padding: 5px 10px 5px 10px;
     font-family: 'Assistant';
     text-decoration: none;
@@ -289,13 +215,6 @@ transform: translate(-50%, -50%);
     background: #d1c7bd;
     text-decoration: none;
   }
-
-@media (prefers-reduced-motion) {
-    #typewriter{
-        animation-name: dissolve;
-        border: none;
-    }
-}
 /* media query tablet view */
 @media screen and (min-width: 500px){
     .gallery {
@@ -318,13 +237,19 @@ transform: translate(-50%, -50%);
 
     .booktext {
         font-family: 'Assistant';
-    }
-    
-    .home_container > .bookcontainer{
-        width: 85%;
-        margin: auto;
-        display: inline block;
-    }
+        font-size: 50px;
+
+
+    /* .flex_container img{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center; 
+    } */
+    /* .nonfiction {
+        flex-basis: 200px;
+
+    } */
 }
 
 
@@ -336,25 +261,32 @@ transform: translate(-50%, -50%);
     }
 
     .home_container{
-        width: 100%;
         grid-template-columns: 60% 30%;
-        grid-column-gap: 20px;
     }
     
     .card{
         text-align: center;
         padding: 20px;
     }
-    .whyread{
-        grid-column: 1 / span 1;
+    .whyread, .like_to_read{
+        grid-column: 1 / span 2;
+        /* grid-row: 1; */
+
     }
+
     .current_read{
-        grid-column: 2;
-        grid-row: 1;
+        grid-column: 3;
+        /* grid-row: 1 / span 2; */
     }
     header {
         flex-flow: row;
         justify-content: space-between;
     }    
+
+    /* .card{   
+        width: 100%;
+        padding: 0;
+      } */
+
     
 }

@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="images/book_icon.png"/>
+    <link rel="icon" type="image/png" href="images/book_icon.png">
     <link rel="stylesheet" href="css/html5reset.css">
     <link href='https://fonts.googleapis.com/css?family=Assistant' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Courier Prime' rel='stylesheet'>
     <link rel="stylesheet" href="css/style.css">
 
     <title>Tyra Briscoe Final Project</title>
@@ -14,61 +15,74 @@
 
 <body>
     <a class = "skip" href="#skip">Skip to Main Content</a>
-    <div class="header">
-        <h1>Tyra's Library</h1>
-    </div>
-    
-    <div class="topnav">
-        <a href="index.html" class="active_page">Home </a>
-        <a href = "fave_books.html"> My Favorite Books </a>
-        <a href = "to_be_read.html"> Books to Read </a>
-    </div>
-
-
+    <header class="header">
+            <h1 id = "typewriter">Tyra's Library</h1>
+        </header>
+    <nav>
+        <div class="topnav">
+            <a href="index.html" class="active_page">Home </a>
+            <a href = "fave_books.html"> My Favorite Books </a>
+            <a href = "to_be_read.html"> My Reading List </a>
+        </div>
+    </nav>
     <main class="books" id = "skip">
+
+    
     <div class = "home_container">
 
-        <div class="card">
-            <h2>Why Read?</h2>
-            <p>Reading has been one of my favorite hobbies since I was young. I love reading because I can always gain knowledge and discover new information whether I am reading non-fiction or fiction. Reading also has a high entertainment value; it allows me to relax and offers a distraction from real life.</p>
-        </div>
+        <div class="card whyread">
 
-        <div class="card">
-            <h2> What Kind of Stuff I Like to Read</h2>
-            <div>
-                <h3> Non- Fiction </h3>
-                <ul>
-                <li> History</li>
-                <li>race, gender, disability, etc</li>
-                </ul>
-                <br>
-                <h3> Fiction </h3>
-                <ul>
-                <li> Literary Fiction</li>
-                <li> Historical Fiction</li>
-                <li> Books that will make me cry</li>
-                </ul>
+
+            <h2>
+                <a href="" tabindex = "0">Introduction</a>
+            </h2>
+            <p> Reading has been one of my favorite things to do for as long as I can remember. Reading is an important practice for me since it allows me to gain knowledge and discover new information. I also enjoy reading just because I think it's fun, and it always offers a nice distraction from real life.</p>
+        
+
+            <div class="card like_to_read">
+                <h2> 
+                    <a href="" tabindex = "0">What I Like to Read</a>
+                </h2>
+                <div>
+                    <h3> Non-Fiction </h3>
+                    <ul>
+                        <li> Bbiographies: retelling a life story </li>
+                        <li> Historical nonfiction: recounting a historical event or specific time period</li>
+                        <li> Race/Gender/ </li>
+                    </ul>
+                    <br>
+                    <h3> Fiction </h3>
+                    <ul>
+                    <li> Literary Fiction</li>
+                    <li> Historical Fiction</li>
+                    <li> Books that will make me cry</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
-        <div class="card">
-            <h2> Currently Reading</h2>
+        
+
+        <div class="card current_read">
+            <h2>
+            <a href="" tabindex = "0">Currently Reading</a>
+            </h2>
             <div class="bookcontainer">
-                <img src="images/assassination_fred_hampton_cover.jpg" alt="book1" class="current_reads_img"/>
+                <img src="images/assassination_fred_hampton_cover.jpg" tabindex = "0" alt="The Assassination of Fred Hampton How the FBI and the Chicago Police Murdered a Black Panther by Jeffrey Haas" class="current_reads_img">
                 <div class="overlay">
-                <div class="booktext">The Assassination of Fred Hampton by Jeffery Haas</div>
+                <div class="booktext">The Assassination of Fred Hampton by Jeffrey Haas</div>
                 </div>
             </div>
 
             <div class="bookcontainer">
-                <img src="images/aint_i_a_woman_cover.jpg" alt="book1" class="current_reads_img"/>
+                <img src="images/aint_i_a_woman_cover.jpg" tabindex = "0" alt="Ain't I a Woman: black women and feminism by bell hooks " class="current_reads_img">
                 <div class="overlay">
                 <div class="booktext">Ain't I a Woman by bell hooks</div>
                 </div>
             </div>
 
             <div class="bookcontainer">
-                <img src="images/memorial_cover.jpeg" alt="book1" class="current_reads_img"/>
+                <img src="images/memorial_cover.jpeg" tabindex = "0" alt="Memorial: a novel by Bryan Washington" class="current_reads_img">
                 <div class="overlay">
                 <div class="booktext">Memorial by Bryan Washington</div>
                 </div>
@@ -77,8 +91,11 @@
     </div>
       </main>
 
-      <!-- <div class="footer">
-        <h2>Footer</h2>
-      </div> -->
+      <footer class="footer">
+        <p>
+        <a class="top" href="#skip">Return to Top</a>
+        <br>Tyra Briscoe (2022)
+        </p>
+      </footer>
 </body>
 </html>
