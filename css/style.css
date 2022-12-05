@@ -14,7 +14,7 @@ header{
   }
 
   .header h1 {
-    font-family: 'Courier Prime';
+    font-family: 'Courier Prime', 'Courier New';
     font-size: 50px;
     text-shadow: 0 0 3px #D6D0C8;
   }  
@@ -72,7 +72,7 @@ header{
 body{
     width: 100%;
     background-color: #D6D0C8;
-	font-family: 'Assistant';
+	font-family: 'Assistant', Verdana;
     font-size: 18px;
 }
 
@@ -97,9 +97,15 @@ p, li{
 /* book bullet points */
 ul{
     list-style: "\1F4D6";
-    list-style-position: inside;
+    list-style-position: outside;
+}
+li{
+    padding-left: 4px;
 }
 
+figcaption, .booktitle{
+    font-size: 1.1em;
+}
 
 /* Footer */
 .footer {
@@ -221,6 +227,10 @@ transform: translate(-50%, -50%);
 -ms-transform: translate(-50%, -50%);}
 
 /* fave books - flex */
+
+.books, .tbr p:first-child{
+    margin: 11px 4px 5px 11px;
+}
     
 .flex_container{
     display: flex;
@@ -239,10 +249,18 @@ transform: translate(-50%, -50%);
     align-content: center;
 }
 .flex_img> img:hover, .gallery > figure> img:hover{
-    border: solid 3px #A5AB60;
+    border: solid 3px #8d8079;
 } 
 .booktitle > p{
     text-align: center;
+}
+
+.booktitle::first-line{
+    font-weight: bolder;
+}
+
+.fave_intro > p::after{
+    content: "\1F642" ;
 }
      
 /* grid- tbr page */
@@ -318,6 +336,9 @@ transform: translate(-50%, -50%);
 
     .booktext {
         font-family: 'Assistant';
+        color: white;
+        font-family: 'Assistant';
+        font-size: 2em;
     }
     
     .home_container > .bookcontainer{
@@ -340,7 +361,10 @@ transform: translate(-50%, -50%);
         grid-template-columns: 60% 30%;
         grid-column-gap: 20px;
     }
-    
+    .booktext {
+        font-size: 1.3em;
+    }
+
     .card{
         text-align: center;
         padding: 20px;
