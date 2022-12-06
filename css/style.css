@@ -308,6 +308,10 @@ transform: translate(-50%, -50%);
     text-decoration: none;
   }
 
+  .hide{
+    display: none;
+  }
+
 @media (prefers-reduced-motion) {
     #typewriter{
         animation-name: dissolve;
@@ -316,6 +320,10 @@ transform: translate(-50%, -50%);
 }
 /* media query tablet view */
 @media screen and (min-width: 500px){
+
+    .hide{
+        display: inline-block ;
+    }
     .gallery {
         display: grid;
         grid-template-columns: 45% 45%;
