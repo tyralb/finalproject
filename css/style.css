@@ -19,28 +19,6 @@ header{
     text-shadow: 0 0 3px #D6D0C8;
   }  
 
-#typewriter{
-    overflow: hidden;
-    border-right: .15em solid #BCB3AE; 
-    white-space: nowrap;
-    margin: 0 auto;
-    animation: 
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end 10s;
-}
-
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #D6D0C8; }
-}
-
 
 /* nav bar */
 .topnav {
@@ -312,12 +290,6 @@ transform: translate(-50%, -50%);
     display: none;
   }
 
-@media (prefers-reduced-motion) {
-    #typewriter{
-        animation-name: dissolve;
-        border: none;
-    }
-}
 /* media query tablet view */
 @media screen and (min-width: 500px){
 
@@ -354,6 +326,24 @@ transform: translate(-50%, -50%);
         margin: auto;
         display: inline block;
     }
+
+    #typewriter{
+        overflow: hidden;
+        border-right: .15em solid #BCB3AE; 
+        white-space: nowrap;
+        margin: 0 auto;
+        animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end 10s;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: #D6D0C8; }
+    }
 }
 
 
@@ -388,4 +378,11 @@ transform: translate(-50%, -50%);
         justify-content: space-between;
     }    
     
+}
+
+@media (prefers-reduced-motion) {
+    #typewriter{
+        animation-name: dissolve;
+        border: none;
+    }
 }
